@@ -4,7 +4,9 @@ title: A C++ class for Topological sort
 category: [code]
 ---
 
-```cpp
+
+
+```c_cpp
 template <typename G, typename T>
 class TopologySort
 {
