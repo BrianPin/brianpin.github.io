@@ -4,6 +4,12 @@ comments: true
 title: A C++ class for Topological sort
 ---
 
+{% highlight ruby linenos %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}
+
 Here I am trying to compose a C++ class that can be used to sort a DAG and generates the Topological list
 
 ```cpp
