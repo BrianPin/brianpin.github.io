@@ -5,17 +5,6 @@ category: [code]
 ---
 
 ```cpp
-#ifndef __SORT_DFS_H__
-#define __SORT_DFS_H__
-
-#include <iostream>
-#include <map>
-#include <list>
-
-using namespace std;
-
-// G is your graph type
-// T is your node type on the graph
 template <typename G, typename T>
 class TopologySort
 {
@@ -106,6 +95,4 @@ public:
 };
 
 static time_mark_t TopologySort::t = 0;
-
-#endif
 ```
