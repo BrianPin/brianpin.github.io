@@ -1,6 +1,6 @@
 ---
 title: A C++ class for Topological sort
-category: [C++, DFS, Topological Sort]
+category: [code]
 ---
 
 ```cpp
