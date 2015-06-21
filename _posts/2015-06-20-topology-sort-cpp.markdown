@@ -1,4 +1,5 @@
 ---
+layout: post
 title: A C++ class for Topological sort
 category: [code]
 ---
