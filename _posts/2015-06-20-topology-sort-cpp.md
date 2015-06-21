@@ -2,6 +2,7 @@
 title: A C++ class for Topological sort
 category: [C++, DFS, Topological Sort]
 ---
+
 ```cpp
 #ifndef __SORT_DFS_H__
 #define __SORT_DFS_H__
