@@ -1,12 +1,13 @@
 ---
 layout: post
+comments: true
 title: A C++ class for Topological sort
-category: [code]
+date:   2015-06-20 16:00:00
 ---
 
 Here I am trying to compose a C++ class that can be used to sort a DAG and generates the Topological list
 
-```
+```c_cpp
 template <typename G, typename T>
 class TopologySort
 {
