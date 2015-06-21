@@ -2,6 +2,7 @@
 title: A C++ class for Topological sort
 category: [C++, DFS, Topological Sort]
 ---
+```C++
 #ifndef __SORT_DFS_H__
 #define __SORT_DFS_H__
 
@@ -105,3 +106,4 @@ public:
 static time_mark_t TopologySort::t = 0;
 
 #endif
+```
