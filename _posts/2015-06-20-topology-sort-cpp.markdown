@@ -4,7 +4,7 @@ title: A C++ class for Topological sort
 category: [code]
 ---
 
-
+Here I am trying to compose a C++ class that can be used to sort a DAG and gnerates the Topological list
 
 ```c_cpp
 template <typename G, typename T>
