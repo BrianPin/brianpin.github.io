@@ -7,7 +7,6 @@ title: A C++ class for Topological sort
 Here I am trying to compose a C++ class that can be used to sort a DAG and generates the Topological list
 
 ```c_cpp
-template <typename G, typename T>
 class TopologySort
 {
     enum color_t {WHITE, GREY, BLACK};
@@ -95,6 +94,4 @@ public:
         return result;
     }
 };
-
-static time_mark_t TopologySort::t = 0;
 ```
