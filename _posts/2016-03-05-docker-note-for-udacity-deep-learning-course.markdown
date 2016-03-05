@@ -24,5 +24,17 @@ After installing docker on my Linux box, this is the first command I executed:
 
 Here is what the command means:
 
-  + docker command **run**
-  + expose port **-p 8888:8888**
+  + docker run [doc](https://docs.docker.com/engine/reference/commandline/run/)
+  + -p 8888:8888 [port mapping]
+  + -it [stackoverflow](http://stackoverflow.com/questions/30137135/confused-about-docker-t-option-to-allocate-a-pseudo-tty)
+  + --rm [remove when exit]
+  + b.gcr.io [google cloud repository](https://cloud.google.com/container-registry/docs/)
+  - [Gracefully stop Docker container](https://www.ctl.io/developers/blog/post/gracefully-stopping-docker-containers/)
+    * SIGKILL: It will let Kernel kill the process without talking to process
+    * SIGTERM: It will ask Process: Would you mind to stop?
+    * docker kill ----signal=SIGINT foo
+    * docker stop ----time=30 foo **Use SIGTERM then SIGKILL**
+  - [List Docker containers](http://www.liquidweb.com/kb/how-to-list-and-attach-to-docker-containers/)
+    * docker ps
+    * docker ps -a
+    * docker ps -l
