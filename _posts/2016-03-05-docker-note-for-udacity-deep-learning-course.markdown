@@ -26,7 +26,7 @@ Here is what the command means:
 
 + docker run [doc](https://docs.docker.com/engine/reference/commandline/run/)
 + -p 8888:8888 [port mapping]
-+ -it [stackoverflow](http://stackoverflow.com/questions/30137135/confused-about-docker-t-option-to-allocate-a-pseudo-tty)
++ -it The -it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container. [stackoverflow](http://stackoverflow.com/questions/30137135/confused-about-docker-t-option-to-allocate-a-pseudo-tty)
 + --rm [remove when exit]
 + b.gcr.io [google cloud repository](https://cloud.google.com/container-registry/docs/)
 - [*docker stop*](https://www.ctl.io/developers/blog/post/gracefully-stopping-docker-containers/)
@@ -38,3 +38,16 @@ Here is what the command means:
    * docker ps
    * docker ps -a
    * docker ps -l
++ /tensorflow-udacity/assignments
+
+This directory contains a Dockerfile. This file has the following content:
+
+
+```
+FROM b.gcr.io/tensorflow/tensorflow:latest
+MAINTAINER Vincent Vanhoucke <vanhoucke@google.com>
+RUN pip install scikit-learn
+ADD *.ipynb /notebooks/
+WORKDIR /notebooks
+CMD ["/run_jupyter.sh"]
+```
