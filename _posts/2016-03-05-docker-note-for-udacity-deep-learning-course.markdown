@@ -29,12 +29,12 @@ Here is what the command means:
 + -it [stackoverflow](http://stackoverflow.com/questions/30137135/confused-about-docker-t-option-to-allocate-a-pseudo-tty)
 + --rm [remove when exit]
 + b.gcr.io [google cloud repository](https://cloud.google.com/container-registry/docs/)
-- [Gracefully stop Docker container](https://www.ctl.io/developers/blog/post/gracefully-stopping-docker-containers/)
-  * SIGKILL: It will let Kernel kill the process without talking to process
-  * SIGTERM: It will ask Process: Would you mind to stop?
-  * docker kill ----signal=SIGINT foo
-  * docker stop ----time=30 foo **Use SIGTERM then SIGKILL**
-- [List Docker containers](http://www.liquidweb.com/kb/how-to-list-and-attach-to-docker-containers/)
-  * docker ps
-  * docker ps -a
-  * docker ps -l
+- [*docker stop*](https://www.ctl.io/developers/blog/post/gracefully-stopping-docker-containers/)
+   * SIGKILL: It will let Kernel kill the process without talking to process
+   * SIGTERM: It will ask Process: Would you mind to stop?
+   * docker kill ----signal=SIGINT foo
+   * docker stop ----time=30 foo **Use SIGTERM then SIGKILL**
+- [*docker ps*](http://www.liquidweb.com/kb/how-to-list-and-attach-to-docker-containers/)
+   * docker ps
+   * docker ps -a
+   * docker ps -l
