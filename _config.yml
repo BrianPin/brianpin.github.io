@@ -13,8 +13,6 @@ highlighter: pygments
 title : Brian's Memory Notes
 tagline: Site Tagline
 author :
-  name : Brian Pin
-  email : blah@email.test
   github : BrianPin
   twitter : BrianBin
 
