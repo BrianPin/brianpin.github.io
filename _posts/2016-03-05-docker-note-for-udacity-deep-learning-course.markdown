@@ -51,3 +51,12 @@ ADD *.ipynb /notebooks/
 WORKDIR /notebooks
 CMD ["/run_jupyter.sh"]
 ```
+
+Imagine docker container is just a process. The "./run_jupyter.sh" is just a process that we asked to run. This will run jupyter ipython command and brings up the ipython process. Which listening on port 8888 is the default port of a notebook server [jupyter doc](http://jupyter-notebook.readthedocs.org/en/latest/public_server.html)
+
++ The assignment container mount from local directory
+> docker run -p 8888:8888 -v "/home/spin/z/tensorflow/tensorflow/examples/udacity:/notebooks" -it --rm b.gcr.io/tensorflow-udacity/assignments
+
+# 2. Summary
+
++ Figure out what composes a container? Is it a process command? Is it a binary or shell script?
