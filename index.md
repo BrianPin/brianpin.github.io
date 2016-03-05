@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BrianPin's Notes
+title: Building Artificial Inteligence
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
