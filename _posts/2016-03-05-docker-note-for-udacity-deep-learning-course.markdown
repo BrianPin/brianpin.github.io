@@ -14,10 +14,10 @@ tensorflow assignment.
 ## 1.1 Docker Container From Google Cloud Repository
 I was following the instructions from this page:
 
-https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/udacity/README.md
+> https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/udacity/README.md
 
 To be able to work on the assignments, the tensorflow has to be installed. There
 are three ways to install. I choose to install a pre-built docker container image.
 After installing docker on my Linux box, this is the first command I executed:
 
-docker run -p 8888:8888 -it --rm b.gcr.io/tensorflow-udacity/assignments
+> docker run -p 8888:8888 -it --rm b.gcr.io/tensorflow-udacity/assignments
