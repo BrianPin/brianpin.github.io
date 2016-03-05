@@ -23,5 +23,6 @@ After installing docker on my Linux box, this is the first command I executed:
 > docker run -p 8888:8888 -it --rm b.gcr.io/tensorflow-udacity/assignments
 
 Here is what the command means:
+
   + docker command **run**
   + expose port **-p 8888:8888**
