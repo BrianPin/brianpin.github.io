@@ -62,6 +62,11 @@ Imagine docker container is just a process. The "./run_jupyter.sh" is just a pro
 + [ipython hotkey](https://www.webucator.com/blog/wp-content/uploads/2015/07/IPython-Notebook-Shortcuts.pdf)
 + [re-reading stdout,stderr for the existing container](https://docs.docker.com/engine/reference/commandline/logs/)
 
+## 1.3 Drawing on iPython notebook
+
++ You have to start ipython note book: command: **ipython notebook**
++ You have to add this line in the beginning: "%matplotlib inline"
+
 # 2. Summary
 
 + Figure out what composes a container? Is it a process command? Is it a binary or shell script?
