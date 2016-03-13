@@ -57,6 +57,11 @@ Imagine docker container is just a process. The "./run_jupyter.sh" is just a pro
 + The assignment container mount from local directory
 > docker run -p 8888:8888 -v "/home/spin/z/tensorflow/tensorflow/examples/udacity:/notebooks" -it --rm b.gcr.io/tensorflow-udacity/assignments
 
+## 1.2 Hotkey when running iPython notebook
+
++ [ipython hotkey](https://www.webucator.com/blog/wp-content/uploads/2015/07/IPython-Notebook-Shortcuts.pdf)
++ [re-reading stdout,stderr for the existing container](https://docs.docker.com/engine/reference/commandline/logs/)
+
 # 2. Summary
 
 + Figure out what composes a container? Is it a process command? Is it a binary or shell script?
