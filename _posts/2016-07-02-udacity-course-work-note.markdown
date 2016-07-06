@@ -1,3 +1,8 @@
+---
+layout: post
+comments: true
+title: Deep Learning Libraries and Functions Used in Assignment
+---
 # Machine Learning Libraries and Functions Used in Assignment
 ## Numpy and some python
 1. scipy reading an image from file and return a numpy ndarray(N-dimensional array)
