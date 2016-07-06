@@ -4,7 +4,9 @@ comments: true
 title: Deep Learning Libraries and Functions Used in Assignment
 ---
 # Machine Learning Libraries and Functions Used in Assignment
+
 ## Numpy and some python
+
 * scipy reading an image from file and return a numpy ndarray(N-dimensional array)
 
 ```Python
@@ -46,12 +48,12 @@ dataset = np.ndarray((nb_rows, img_size, img_size), dtype=np.float32
 labels = np.ndarray(nb_rows, dtype=np.int32)
 ```
 
-* Two random shuffle of the data
+* Two methods random shuffle of the data
 
 ```python
-#letter_set is numpy ndarray
+#Method 1 letter_set is numpy ndarray
 np.random.shuffle(letter_set)
-#Using index slicing to randomize the data
+#Method 2 Using index slicing to randomize the data
 permutation = np.random.permutation(labels.shape[0])
 shuffled_dataset = dataset[permutation,:,:]
 ```
