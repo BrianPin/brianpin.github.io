@@ -79,9 +79,10 @@ If we want to login to the container, we can do this:
 First docker ps find out the container running id:
 
 docker ps
-|CONTAINER ID       | IMAGE                                          | COMMAND             | CREATED            |  STATUS            |PORTS                             | NAMES     |
-| ----------------- |:----------------------------------------------:|:-------------------:|:------------------:|:------------------:|:--------------------------------:|----------:|
-|52f6e407045a       | b.gcr.io/tensorflow-udacity/assignments:0.5.0  | "/run_jupyter.sh"   |9 minutes ago       |Up 8 minutes        |6006/tcp, 0.0.0.0:8888->8888/tcp  | sad_morse |
+
+CONTAINER ID      | IMAGE                                          | COMMAND             | CREATED            | STATUS             | PORTS                            | NAMES      |
+----------------- | ---------------------------------------------- | ------------------- | ------------------ | ------------------ | -------------------------------- | ---------- |
+52f6e407045a      | b.gcr.io/tensorflow-udacity/assignments:0.5.0  | "/run_jupyter.sh"   | 9 minutes ago      | Up 8 minutes       | 6006/tcp, 0.0.0.0:8888->8888/tcp | sad_morse  |
 
 Then execute it to login:
 
