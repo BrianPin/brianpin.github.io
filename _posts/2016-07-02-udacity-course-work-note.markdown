@@ -7,31 +7,31 @@ title: Deep Learning Libraries and Functions Used in Assignment
 
 ## 1 Numpy and some python
 
-    * scipy reading an image from file and return a numpy ndarray(N-dimensional array)
+* scipy reading an image from file and return a numpy ndarray(N-dimensional array)
 
     ```Python
     ndimage.imread(image_file)
     ```
 
-    * Convert the data type in the numpy ndarray to desired type
+* Convert the data type in the numpy ndarray to desired type
 
     ```python
     ndimage.imread(image_file).astype(float)
     ```
 
-    * Mathematic operation to every element in the vector or matrix
+* Mathematic operation to every element in the vector or matrix
 
     ```python
     ndimage.imread(image_file).astype(float) - pixel_depth/2
     ```
 
-    * Numpy index slicing, since there are 3 dims, the following is selecting the first dim from 0 to num_images-1
+* Numpy index slicing, since there are 3 dims, the following is selecting the first dim from 0 to num_images-1
 
     ```python
     dataset = dataset[0:num_images, :, :]
     ```
 
-    * Python pickle dump/serialize data to file
+* Python pickle dump/serialize data to file
 
     ```python
     #Serializing to a file
@@ -48,7 +48,7 @@ title: Deep Learning Libraries and Functions Used in Assignment
     labels = np.ndarray(nb_rows, dtype=np.int32)
     ```
 
-    * Two methods random shuffle of the data
+* Two methods random shuffle of the data
 
     ```python
     #Method 1 letter_set is numpy ndarray
