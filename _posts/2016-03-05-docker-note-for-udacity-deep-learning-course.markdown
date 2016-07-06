@@ -69,12 +69,15 @@ Imagine docker container is just a process. The "./run_jupyter.sh" is just a pro
 
 # 2. Docker Image Login
 If we execute the docker command like :
+
 ```
 docker run -p 8888:8888 -v ~/Downloads/spin/tensorflow/tensorflow/examples/udacity/:/notebooks -it --rm b.gcr.io/tensorflow-udacity/assignments:0.5.0
 ```
+
 We will see it running, and it will mount my udacity example folder on the container.
 If we want to login to the container, we can do this:
 First docker ps find out the container running id:
+
 ```
 docker ps
 CONTAINER ID        IMAGE                                           COMMAND             CREATED             STATUS              PORTS                              NAMES
@@ -82,9 +85,11 @@ CONTAINER ID        IMAGE                                           COMMAND     
 ```
 
 Then execute it to login:
+
 ```
 docker exec -i -t 52f6e407045a /bin/bash
 ```
+
 # 3. Summary
 
 + Figure out what composes a container? Is it a process command? Is it a binary or shell script?
