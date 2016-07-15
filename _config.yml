@@ -2,7 +2,7 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 #permalink: /:categories/:year/:month/:day/:title
 #markdown: redcarpet, remove this setting by github suggestion
-markdown: maruku
+markdown: redcarpet
 permalink: pretty
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
