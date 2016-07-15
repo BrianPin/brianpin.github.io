@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Libraries and Functions Used in Assignment
+title: Numpy functions used in the course
 ---
 
 # Machine Learning Libraries and Functions Used in Assignment
