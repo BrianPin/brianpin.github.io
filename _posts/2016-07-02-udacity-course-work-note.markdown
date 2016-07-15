@@ -58,7 +58,3 @@ np.random.shuffle(letter_set)
 permutation = np.random.permutation(labels.shape[0])
 shuffled_dataset = dataset[permutation,:,:]
 ```
-
-## 2 LogisticRegression of sklearn
-
-  * _TODO_ for learning the scikit-learn of LogisticRegression to classify the letters
