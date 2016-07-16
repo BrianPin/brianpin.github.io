@@ -14,3 +14,5 @@ $$ \frac{1}{\left(1+\left(\frac{1}{1+\left(\frac{1}{1+2x}\right)}\right)\right)}
 \begin{equation}
    E = mc^2
 \end{equation}
+
+$$ \ita(a) = \frac{1}{1+\exp^(a)} $$
