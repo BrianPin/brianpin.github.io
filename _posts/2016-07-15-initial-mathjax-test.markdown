@@ -19,5 +19,7 @@ $$ \sigma(a) = \frac{1}{1+e^{-a}} $$
 
 
 (math.stackexchange)[http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference]
+
 (greek letters)[https://www.wikiwand.com/en/Sigma]
+
 (MIT tutorial)[https://6002x.mitx.mit.edu/wiki/view/MathJaxEquationFormatting]
