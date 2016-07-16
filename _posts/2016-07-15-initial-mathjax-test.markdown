@@ -15,4 +15,4 @@ $$ \frac{1}{\left(1+\left(\frac{1}{1+\left(\frac{1}{1+2x}\right)}\right)\right)}
    E = mc^2
 \end{equation}
 
-$$ \sigma(a) = \frac{1}{1+e^(a)} $$
+$$ \sigma(a) = \frac{1}{1+e^{-a}} $$
