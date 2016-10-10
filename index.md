@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Building Artificial Inteligence
+title: Random Notes
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
