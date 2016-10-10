@@ -17,4 +17,6 @@ __#entropy__, __#cross-entropy__, __#gradient__
 * It is mainly used in the loss calculation between models and expected model output
 * Cross entropy formula:
 
-$$ cross-entropy = \sum_i ylog(y') $$
+$$ cross-entropy = \sum_i \mathbf{y}log(\mathbf{y'}) $$
+
+* y is the real observed data, y' is the model generated data. Both y and y' are in vectors form
