@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Random Notes
+title: Tensorflow, ML, C++ and Algorithms
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
