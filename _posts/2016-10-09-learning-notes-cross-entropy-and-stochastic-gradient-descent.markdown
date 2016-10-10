@@ -16,4 +16,4 @@ __#entropy__, __#cross-entropy__, __#gradient__
 # Cross Entropy
 * It is mainly used in the loss calculation between models and expected model output
 * Cross entropy formula:
-$ H(y_i)= -\sum_i y_ilog(y_i') $
+$H(y_i)= -\sum_i y_ilog(y_i')$
