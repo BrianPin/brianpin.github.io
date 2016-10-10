@@ -17,9 +17,8 @@ $$ \frac{1}{\left(1+\left(\frac{1}{1+\left(\frac{1}{1+2x}\right)}\right)\right)}
 
 $$ \phi(z) = \frac{1}{1+e^{-z}} $$
 
-```
-$$ cross-entropy = \sum_i {y_i\log(y_i')} $$
-```
+$$ cross-entropy = \sum_i {y_i(y_i')} $$
+
 
 [math.stackexchange](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
