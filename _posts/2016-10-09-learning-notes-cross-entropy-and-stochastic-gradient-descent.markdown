@@ -18,5 +18,5 @@ __#entropy__, __#cross-entropy__, __#gradient__
 * Cross entropy formula:
 
 \begin{equation}
-H(y_i)= -\sum_i y_ilog(y_i')
+    H(y_i)= -\sum_i y_ilog(y_i')
 \end{equation}
