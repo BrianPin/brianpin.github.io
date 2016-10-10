@@ -17,7 +17,7 @@ $$ \frac{1}{\left(1+\left(\frac{1}{1+\left(\frac{1}{1+2x}\right)}\right)\right)}
 
 $$ \phi(z) = \frac{1}{1+e^{-z}} $$
 
-$$y = \sum_i x$$
+$$y = \sum_i y_ilogy_i$$
 
 
 [math.stackexchange](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
