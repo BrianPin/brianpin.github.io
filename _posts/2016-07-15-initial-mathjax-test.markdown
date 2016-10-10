@@ -15,9 +15,9 @@ $$ \frac{1}{\left(1+\left(\frac{1}{1+\left(\frac{1}{1+2x}\right)}\right)\right)}
    E = mc^2
 \end{equation}
 
-$$ \phi(z) = \frac{1}{1+e^{-z}} H(y_i) = -\sum_i y_ilog(y_i') $$
+$$ \phi(z) = \frac{1}{1+e^{-z}} $$
 
-$$ H(y_i) = -\sum_i y_ilog(y_i') $$
+$$ h(y_i) = -\sum_i y_ilog(y_i') $$
 
 [math.stackexchange](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
