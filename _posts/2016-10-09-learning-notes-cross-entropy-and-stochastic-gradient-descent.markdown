@@ -23,8 +23,10 @@ $$ cross-entropy = \sum_i \mathbf{y}log(\mathbf{y'}) $$
 
 # Stochastic Gradient Descent
 . Gradient Descent: Aggregate all training samples output and then calculate the gradient
+
 . Stochastic Gradient Descent: Update the gradient during each training samples iteration
 
 # TensorFlow Side Notes
 . Interactive sessions: Normally, when you focus the build the graph, or you don't have to check how the graph functions, you have to build the complete graph, before you can run the session. But, if you use interactive sessions, you can run the session without building the complete graph.
+
 . Computational Graph: Although Numpy has optimized mathmatical calculations of TensorFlow, but it is still not enough because it will have too many context switches. So, in order to solve this problem, TensorFlow will read the whole computation and then delicate the one that needs heavy computation to the outside world of Python
