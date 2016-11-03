@@ -19,7 +19,7 @@ Use Tensorflow to build a 2-layer neural network and training classification mod
 
 #### Training One-Iteration In Short
 
-```
+```python
 # Part 1. forward tensor
 hidden1 = tf.nn.relu(tf.matmul(images, weights1) + biases1)
 hidden2 = tf.nn.relu(tf.matmul(hidden1, weights2) + biases2)
@@ -37,7 +37,7 @@ The above is a unit-step for training. Each training iteration will run through 
 
 #### Training Overall Flow In Short
 
-```
+```python
 # Part 1. setting tensors operation for the graph
 with tf.Graph().as_default():
   logits = mnist.inference(image_input, flags...)
@@ -81,4 +81,4 @@ The above is a smapshot of the whole training flow. I felt it is a little bit co
 
 
 ### References
-[doc] https://www.tensorflow.org/versions/r0.10/tutorials/mnist/tf/index.html
+[official doc] (https://www.tensorflow.org/versions/r0.10/tutorials/mnist/tf/index.html)
