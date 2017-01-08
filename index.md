@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Tensorflow, ML, C++ and Algorithms
-tagline: Supporting tagline
+title: Learning and everything.
 ---
 {% include JB/setup %}
 
