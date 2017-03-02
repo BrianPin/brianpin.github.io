@@ -70,3 +70,20 @@ Since all the training procedures are similar, I just reversed the label and bat
   <img src="/assets/lstm.png">
   <div class="thecap">A typical LSTM cell</div>
 </div>
+
+* The corresponding implementation of a LSTM cell in Tensorflow
+
+```python
+def lstm_cell(i, o, state):
+    """Create a LSTM cell. See e.g.: http://arxiv.org/pdf/1402.1128v1.pdf
+    Note that in this formulation, we omit the various connections between the
+    previous state and the gates."""
+
+    input_gate = tf.sigmoid(tf.matmul(i, ix) + tf.matmul(o, im) + ib)
+    forget_gate = tf.sigmoid(tf.matmul(i, fx) + tf.matmul(o, fm) + fb)
+    update = tf.matmul(i, cx) + tf.matmul(o, cm) + cb
+    state = forget_gate * state + input_gate * tf.tanh(update)
+    output_gate = tf.sigmoid(tf.matmul(i, ox) + tf.matmul(o, om) + ob)
+    return (output_gate * tf.tanh(state), state)
+
+```
