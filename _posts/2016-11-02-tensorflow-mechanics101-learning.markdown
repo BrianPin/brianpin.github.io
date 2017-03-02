@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Tensorflow Mechanics 101 Learning Notes
-use_math: true
+mathjax: true
 ---
 ### What we are doing
 

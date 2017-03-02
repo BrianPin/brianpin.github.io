@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: Docker Installation For Deep Learning Course
+mathjax: true
 ---
 # 1. Introduction
 I have always been wondering to learn the Course of Deep Learning. So I started

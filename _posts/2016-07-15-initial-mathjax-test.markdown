@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Test mathjax
-use_math: true
+mathjax: true
 ---
 
 # Using MathJax

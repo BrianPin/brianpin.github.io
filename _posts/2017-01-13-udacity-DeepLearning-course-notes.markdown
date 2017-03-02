@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title: Notes on Artificial Intelligence course of Udacity
-use_math: true
+mathjax: true
 ---
 
 ### A.I Terminologies: Fully Observable, Partial Observable

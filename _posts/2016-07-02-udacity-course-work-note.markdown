@@ -2,6 +2,7 @@
 layout: post
 comments: true
 title: Numpy functions used in the course
+mathjax: true
 ---
 
 # Machine Learning Libraries and Functions Used in Assignment
