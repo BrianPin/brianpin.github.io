@@ -81,4 +81,4 @@ The above is a smapshot of the whole training flow. I felt it is a little bit co
 
 
 ### References
-[official doc](https://www.tensorflow.org/versions/r0.10/tutorials/mnist/tf/index.html)
+<a href="https://www.tensorflow.org/versions/r0.10/tutorials/mnist/tf/index.html" target="_blank">Tensorflow doc</a>
