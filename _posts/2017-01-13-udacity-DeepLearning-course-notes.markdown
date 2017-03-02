@@ -67,7 +67,7 @@ Since all the training procedures are similar, I just reversed the label and bat
 * The gating values for each gate get controlled by a tiny logistic regression of each parameters
 * A typical LSTM cell is:
 <div class="imgcap">
-  <img src="/assets/lstm.png">
+  <img src="/assets/lstm.jpeg">
   <div class="thecap">A typical LSTM cell</div>
 </div>
 
