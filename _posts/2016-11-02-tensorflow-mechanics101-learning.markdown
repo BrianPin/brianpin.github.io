@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: Tensorflow Mechanics 101 Learning Notes
 mathjax: true
+excerpt: "More Tensorflow explorations in multilayer neural network"
 ---
 ### What we are doing
 

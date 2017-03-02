@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: Notes on Artificial Intelligence course of Udacity
 mathjax: true
+excerpt: "Learning the word2vec theories and related Tensorflow apis"
 ---
 
 ### A.I Terminologies: Fully Observable, Partial Observable

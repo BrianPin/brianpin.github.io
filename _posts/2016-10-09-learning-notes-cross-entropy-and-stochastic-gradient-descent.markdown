@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: Cross Entropy And Stochastic Gradient Descent
 mathjax: true
+excerpt: "Cross entropy plays a similar role in deep learning as well as square root error loss function"
 ---
 # Introduction
 Today I am going to write down the note about cross entropy and Stochastic Gradient Descent. Why? Because I feel they are kind of a bridge between a generic software engineer to begin a machine learning software engineer. Also it is because it just so happened today that I learned the concept of these two and I want to write down to help me remember in the future and share it with people who are not familiar but want to know it.

@@ -3,7 +3,9 @@ layout: post
 comments: true
 title: Docker Installation For Deep Learning Course
 mathjax: true
+excerpt: "Analysing how to use docker to install needed software for learning Tensorflow"
 ---
+
 # 1. Introduction
 I have always been wondering to learn the Course of Deep Learning. So I started
 to learn the Udacity course ud730. And the first significant hump I met is the

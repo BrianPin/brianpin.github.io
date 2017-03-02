@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: Test mathjax
 mathjax: true
+excerpt: "Testing mathjax integration with my blog"
 ---
 
 # Using MathJax

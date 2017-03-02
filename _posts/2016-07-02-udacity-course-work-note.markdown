@@ -3,6 +3,7 @@ layout: post
 comments: true
 title: Numpy functions used in the course
 mathjax: true
+excerpt: "Note down functions used in Tensorflow that I first met in the udacity course"
 ---
 
 # Machine Learning Libraries and Functions Used in Assignment
