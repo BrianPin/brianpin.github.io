@@ -58,17 +58,15 @@ Since all the training procedures are similar, I just reversed the label and bat
 * To optimize sequence parameters we need to back propagate the derivative through time. Or in practice as many steps as we can afford.
 * A lot of correlated updates. This is bad for stochastic gradient descent. Math is very unstable.
 * Exploding gradient and vanishing gradient problems
-
- * The gradients grows exponentially or the gradients demimishes to zero
-
- * The gradient clipping (Only works for grow cases). This is kind of a simple hack.
-
- * For gradient vanishing problems, it is kind of memory loss. (This is where LSTM comes in)!
-
- * There is a `memory cell` in the center, and `write`, `read` and `forget`
-
- * There are gates to control these above actions, and gate control is a continuous parameter
-
- * Means we can take derivative and back propagate
-
- * The gating values for each gate get controlled by a tiny logistic regression of each parameters
+* The gradients grows exponentially or the gradients demimishes to zero
+* The gradient clipping (Only works for grow cases). This is kind of a simple hack.
+* For gradient vanishing problems, it is kind of memory loss. (This is where LSTM comes in)!
+* There is a `memory cell` in the center, and `write`, `read` and `forget`
+* There are gates to control these above actions, and gate control is a continuous parameter
+* Means we can take derivative and back propagate
+* The gating values for each gate get controlled by a tiny logistic regression of each parameters
+* A typical LSTM cell is:
+<div class="imgcap">
+  <img src="/assets/lstm.png">
+  <div class="thecap">A typical LSTM cell</div>
+</div>
