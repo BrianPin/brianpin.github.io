@@ -62,7 +62,7 @@ Since all the training procedures are similar, I just reversed the label and bat
 
  * The gradient clipping (Only works for grow cases). This is kind of a simple hack.
 
- * For gradient vanishing problems, it is kind of memory loss. (This is where LSTM comes in)![alt text](lstm.png "LSTM")
+ * For gradient vanishing problems, it is kind of memory loss. (This is where LSTM comes in)!
 
  * There is a `memory cell` in the center, and `write`, `read` and `forget`
 
