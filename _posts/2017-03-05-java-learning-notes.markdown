@@ -18,7 +18,7 @@ Have you ever went to a resturant that you finished your order, and the waiter g
 
 Look at this example from an article from DZone: [java.util.concurrent.Future Basics](https://dzone.com/articles/javautilconcurrentfuture)
 
-```Java
+```java
 private final ExecutorService pool = Executors.newFixedThreadPool(10);
 public Future<String> startDownloading(final URL url) throws IOException {
     return pool.submit(new Callable<String>() {
