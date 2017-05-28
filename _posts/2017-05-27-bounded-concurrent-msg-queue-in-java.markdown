@@ -16,44 +16,45 @@ package queue;
 import java.util.concurrent.locks.*;
 
 public class BoundedConcurrentQueue {
-	final Lock lock = new ReentrantLock();
-	final Condition notFull = lock.newCondition();
-	final Condition notEmpty = lock.newCondition();
-	int readIndex = 0;
-	int writeIndex = 0;
-	String[] msg;
-	public BoundedConcurrentQueue(int n) {
-		msg = new String[n];
-	}
-	/// No explicit constructor because not necessary
-	public void addMsg(String newMsg) throws InterruptedException {
-		lock.lock();
-		try {
-			while ((writeIndex+1)%msg.length == readIndex)
-				notFull.await();
-			msg[writeIndex++] = newMsg;
-			notEmpty.signal();
-			System.out.println(newMsg+" added to index: " + (writeIndex-1)%msg.length + " read index: " + readIndex);
-			writeIndex = writeIndex % msg.length;
-		} finally {
-			lock.unlock();
-		}
-	}
-	public String getMsg() throws InterruptedException {
-		lock.lock();
-		String thisMsg;
-		try {
-			while (readIndex == writeIndex)
-				notEmpty.await();
+    final Lock lock = new ReentrantLock();
+    final Condition notFull = lock.newCondition();
+    final Condition notEmpty = lock.newCondition();
+    int readIndex = 0;
+    int writeIndex = 0;
+    String[] msg;
+    public BoundedConcurrentQueue(int n) {
+        msg = new String[n];
+    }
+    /// No explicit constructor because not necessary
+    public void addMsg(String newMsg) throws InterruptedException {
+        lock.lock();
+        try {
+            while ((writeIndex+1)%msg.length == readIndex)
+                notFull.await();
+            msg[writeIndex++] = newMsg;
+            notEmpty.signal();
+            System.out.println(newMsg+" added to index: " +
+                (writeIndex-1)%msg.length + " read index: " + readIndex);
+            writeIndex = writeIndex % msg.length;
+        } finally {
+            lock.unlock();
+        }
+    }
+    public String getMsg() throws InterruptedException {
+        lock.lock();
+        String thisMsg;
+        try {
+            while (readIndex == writeIndex)
+                notEmpty.await();
 
-			thisMsg = msg[readIndex++];
-			readIndex = readIndex % msg.length;
-			notFull.signal();
-			return thisMsg;
-		} finally {
-			lock.unlock();
-		}
-	}
+            thisMsg = msg[readIndex++];
+            readIndex = readIndex % msg.length;
+            notFull.signal();
+            return thisMsg;
+        } finally {
+            lock.unlock();
+        }
+    }
 }
 ```
 And here is the driver code to run it:
@@ -67,47 +68,48 @@ import queue.BoundedConcurrentQueue;
 
 public class AppMain {
 
-	public static void main(String[] args) {
-		BoundedConcurrentQueue boundedQ = new BoundedConcurrentQueue(2);
-		List<Callable<Void>> writerTasks = Arrays.asList(
-				(Callable<Void>)(() -> {boundedQ.addMsg("msga"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgb"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgc"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgc"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgd"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msge"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgf"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgg"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgh"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgi"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgj"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgk"); return null;}),
-				(Callable<Void>)(() -> {boundedQ.addMsg("msgl"); return null;}));
+    public static void main(String[] args) {
+        BoundedConcurrentQueue boundedQ = new BoundedConcurrentQueue(2);
+        List<Callable<Void>> writerTasks = Arrays.asList(
+                (Callable<Void>)(() -> {boundedQ.addMsg("msga"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgb"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgc"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgc"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgd"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msge"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgf"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgg"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgh"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgi"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgj"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgk"); return null;}),
+                (Callable<Void>)(() -> {boundedQ.addMsg("msgl"); return null;}));
 
-		Callable<Void> consumerTask = ()-> {
-			while (true) {
-				System.out.println("got msg " + boundedQ.getMsg());
-			}
-		};
+        Callable<Void> consumerTask = ()-> {
+            while (true) {
+                System.out.println("got msg " + boundedQ.getMsg());
+            }
+        };
 
-		ExecutorService w = Executors.newSingleThreadExecutor();
-		ExecutorService r = Executors.newSingleThreadExecutor();
-		// Read multiple messages from the queue using executors
-		r.submit(()->{
-			ExecutorService readerExecutor = Executors.newFixedThreadPool(1);
-			readerExecutor.submit(consumerTask);			
-		});
-		// Write multiple messages to the queue using executors
-		w.submit(()->{
-			ExecutorService writeExecutor = Executors.newFixedThreadPool(writerTasks.size());
-			try {
-				writeExecutor.invokeAll(writerTasks);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		});
-	}
+        ExecutorService w = Executors.newSingleThreadExecutor();
+        ExecutorService r = Executors.newSingleThreadExecutor();
+        // Read multiple messages from the queue using executors
+        r.submit(()->{
+            ExecutorService readerExecutor = Executors.newFixedThreadPool(1);
+            readerExecutor.submit(consumerTask);			
+        });
+        // Write multiple messages to the queue using executors
+        w.submit(()->{
+            ExecutorService writeExecutor =
+                Executors.newFixedThreadPool(writerTasks.size());
+            try {
+                writeExecutor.invokeAll(writerTasks);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        });
+    }
 }
 ```
 
