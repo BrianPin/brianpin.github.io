@@ -122,3 +122,13 @@ Here is the quick take away:
 3. I made quite a few bugs in the **readIndex** and **writeIndex** manipulation. It is very easy to make some bug when manipulating these two little guys.
 
 4. I still don't know why when I made the `Callable<Void>` list, I have to `return null;`. In Java 8, is it because Callable<Void>?
+
+5. Most of examples I can find on the web are implementing some consumer and produce thread. I ignore all that and using a Java 8 style. I believe this is something new. Also most of the examples you can find are not using **read pointer/index** and **write pointer/index**. This feature is also unique on the web.
+
+6. Actually there is a hierarchy of Java built-in classes and interfaces in the util.concurrent module.
+___
+interfaces `BlockingQueue<E>`, `ConcurrentMap<K, V>`
+
+classes `ArrayBlockingQueue`, `DelayQueue`, `ConcurrentHashMap<K, V>`, and `ConcurrentSkipList<K, V>`
+
+---
