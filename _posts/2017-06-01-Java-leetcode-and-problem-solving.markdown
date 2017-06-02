@@ -5,30 +5,29 @@ title: Java, Leetcode and Problem solving
 mathjax: true
 excerpt: "Learning Java and problem solving"
 ---
-# Java
-## Algorithm Methods
+## Java
 - Sorting a list or an array can use these two methods:
- - Arrays.sort(array, Comparator<T>)
- - Collections.sort(list, Comparator<T>)
- - The Comparator interface is:
- ```java
-    Comparator<T>() {
+  - Arrays.sort(array, Comparator<T>)
+  - Collections.sort(list, Comparator<T>)
+  - The Comparator interface is:
+  ```java
+     Comparator<T>() {
         @Override
         int compare(T t1, T t2) {
 
         }
-    }
- ```
- - **Q1:** How come we can instantiate an interface like below?
- - `Comparator<T> c = new Comparator<T>(){...}`?
+     }
+  ```
+  - **Q1:** How come we can instantiate an interface like below?
+  - `Comparator<T> c = new Comparator<T>(){...}`?
 
-## Patterns and Language Features
+## Java Language Features
 - To initialize a list of objects:
- - Use Arrays.asList function: `List<T> A = Arrays.asList(obj1, obj2);`
- - __Or__ `List<T> A = Arrays.asList(value1, value2 ...);`
+  - Use Arrays.asList function: `List<T> A = Arrays.asList(obj1, obj2);`
+  - __Or__ `List<T> A = Arrays.asList(value1, value2 ...);`
 - To initialize an array of objects:
- - Use '{', '}' literal to surround new'ed objects
- - `T[] A = {new T(...), new T(...), new T(...), new T(...)}`
+  - Use '{', '}' literal to surround new'ed objects
+  - `T[] A = {new T(...), new T(...), new T(...), new T(...)}`
 - When we call `List<T>::add(t)`, we are not creating a new T, we just copy the reference
 - So when the reference changed in the new List, the original object will change too!!
 
