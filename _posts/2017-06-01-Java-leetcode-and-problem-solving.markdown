@@ -65,11 +65,11 @@ public class Solution {
 - General algorithm description
  - Loop invariant: whenever we see the res list, it is always in a merged way!!!
  - We start by looping through the original array, for each interval in the array we do some checks:
-  - Call the array element interval as **element_i**
-  - if **newInterval** has not overlapped with **element_i**
-   - if **element_i** is before the **newInterval**, we insert the **element_i**
-   - if **element_i** is after the **newInterval**, we insert both if **newInterval** has not been inserted before
-  - if **newInterval** is overlapping with the **element_i**, we do not insert but just update the boundaries of **newInterval**
+   - Call the array element interval as **element_i**
+   - if **newInterval** has not overlapped with **element_i**
+     * if **element_i** is before the **newInterval**, we insert the **element_i**
+     * if **element_i** is after the **newInterval**, we insert both if **newInterval** has not been inserted before
+   - if **newInterval** is overlapping with the **element_i**, we do not insert but just update the boundaries of **newInterval**
 
 ```java
         for (int i = 0; i < intervals.size(); i++) {
