@@ -56,10 +56,12 @@ public class Solution {
 - The above has customized the compare method in order to be sorted in the way I wish.
  - I want to sort in way that when an interval has smaller start value, it will be in the front
  - I also want to sort in a way that when two intervals has same start value, the one that has smaller end value will be in the front
+
 ```java
         List<Interval> res = new ArrayList<Interval>();
         boolean has_added = false;
 ```
+
 - General algorithm description
  - Loop invariant: whenever we see the res list, it is always in a merged way!!!
  - We start by looping through the original array, for each interval in the array we do some checks:
@@ -68,6 +70,7 @@ public class Solution {
    - if **element_i** is before the **newInterval**, we insert the **element_i**
    - if **element_i** is after the **newInterval**, we insert both if **newInterval** has not been inserted before
   - if **newInterval** is overlapping with the **element_i**, we do not insert but just update the boundaries of **newInterval**
+
 ```java
         for (int i = 0; i < intervals.size(); i++) {
             if (intervals.get(i).end < newInterval.start)
