@@ -6,7 +6,7 @@ mathjax: true
 excerpt: ""
 ---
 
-## Preparation
+### Preparation
 
 - Data source
   - Data is text8.zip downloaded from Mattmahoney.net
@@ -40,4 +40,20 @@ batch index 4 [0, 0, 0, 1, 0, 0, 0, 0, 0]
     - The batch is a tensor with shape to be (batch_size, vocabulary_size) i.e (64, 26+1)
 
 
-## Training Using LSTM With Tensorflow Implementation
+### Training Procedure
+- Aribtrarily defined training steps to be 7001 by course teacher
+- For each step, the training code fetch a number of unrolling batches to the graph. This is because LSTM's RNN nature. It needs to keep previous chars for calculation
+- For example, in one of the training steps, we fed the graph with a list of length **num_unrolling+1**
+  - `[batches[0], batches[1], batches[2], batches[3] .......... batches[num__unrolling]]`
+    - Each batches[i] contains **64** 1-hot vectors converted from characters extracted from source uniformly distributed
+    - `*a*  b  c  d  __first step__`
+    - `          *d* e  f  g __second step__`
+
+- Feeding the graph
+  - `feed_dict[train_data[i]] = batches[i]`  This is in the session training loop
+  - `train_data.append(tf.placeholder(...blah...))`   This is in the graph
+  - All I think is that code is a bit of magic. All we can imagine is using this high level interpretation:
+  - `train_data[i] = batches[i]`
+
+
+
