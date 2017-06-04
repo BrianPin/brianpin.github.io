@@ -52,8 +52,7 @@ batch index 4 [0, 0, 0, 1, 0, 0, 0, 0, 0]
 - Feeding the graph
   - `feed_dict[train_data[i]] = batches[i]`  This is in the session training loop
   - `train_data.append(tf.placeholder(...blah...))`   This is in the graph
-  - All I think is that code is a bit of magic. All we can imagine is using this high level interpretation:
-  - `train_data[i] = batches[i]`
+  - All I think is that code is a bit of magic. All we can imagine is using this high level interpretation: `train_data[i] = batches[i]`
 
 
 
