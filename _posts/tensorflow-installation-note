@@ -1,0 +1,46 @@
+---
+layout: post
+comments: true
+title: A note on my deep learning setup
+mathjax: true
+excerpt: "Just a note about software stack setup"
+---
+## MacOS highSerra
+### Choosing to use python3
+### Choosing to use virtual_env
+ 1. Install home brew
+ 2. Install python3 using `brew`
+ 3. Install `pip`
+ 4. Install `virtaulenv` using pip
+ 5. Prepare tensorflow virtual env path
+  - `virtualenv --system-site-packages -p python3 tensorflow-env`
+ 6. Go into `virtualenv`
+  - `source ~/tensorflow-env/bin/activate`
+ 7. Install Tensorflow and its dependencies
+  - `easy_install -U pip`
+  - `pip3 install --upgrade tensorflow`
+ 8. Install jupyter
+  - `pip3 install jupyter`
+  - Example command for starting a jupyter notebook server
+    - `jupyter notebook 1_notmnist.ipynb`
+
+## Linux Environment
+### Choosing to use python3
+### Choosing to use virtual_env
+ 1. Install python using apt-get
+ 2. Install `pip`
+  - `sudo easy_install pip`
+ 3. Install virtual_env
+  - `sudo pip3 install --upgrade virtualenv`
+ 4. Prepare tensorflow virtual_env path
+  - `mkdir tensorflow-venv-3`
+ 5. Install virtual env on that path
+  - `virtualenv --system-site-packages -p python3 tensorflow-venv-3/`
+ 6. Go into that virtual env
+  - `source ~/tensorflow-venv-3/bin/activate`
+ 7. Install pip again on that environment
+  - `easy_install -U pip`
+ 8. Install Tensorflow
+  - `pip3 install --upgrade tensorflow`
+ 9. Install jupyter
+  - `pip3 install jupyter`
