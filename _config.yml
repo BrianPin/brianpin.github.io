@@ -7,7 +7,7 @@ kramdown:
 paginate:     5
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
-title : My A.I. journey
+title : I do write blogs
 author :
   github : BrianPin
   twitter : BrianBin
