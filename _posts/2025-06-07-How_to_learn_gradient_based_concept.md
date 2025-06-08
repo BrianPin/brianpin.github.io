@@ -1,4 +1,4 @@
-<a href="https://colab.research.google.com/github/BrianPin/brianpin.github.io/blob/master/2025-06-07-How_to_lean_gradient_based_concept.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+<a href="https://colab.research.google.com/github/BrianPin/brianpin.github.io/blob/master/2025-06-07-How_to_learn_gradient_based_concept.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 - There is such an interest question I encountered during my job interview. The question is about to find a optimal point in a plane that has smallest geometric distance summation to every given data point on the plane
 
