@@ -21,7 +21,7 @@ plt.show()
 
 
     
-![png](2025-06-07-How_to_lean_gradient_based_concept_files/2025-06-07-How_to_lean_gradient_based_concept_4_0.png)
+![png](2025-06-07-How_to_learn_gradient_based_concept_files/2025-06-07-How_to_lean_gradient_based_concept_4_0.png)
     
 
 
@@ -38,7 +38,7 @@ plt.show()
 
 
     
-![png](2025-06-07-How_to_lean_gradient_based_concept_files/2025-06-07-How_to_lean_gradient_based_concept_6_0.png)
+![png](2025-06-07-How_to_learn_gradient_based_concept_files/2025-06-07-How_to_lean_gradient_based_concept_6_0.png)
     
 
 
@@ -75,7 +75,7 @@ plt.show()
 
 
     
-![png](2025-06-07-How_to_lean_gradient_based_concept_files/2025-06-07-How_to_lean_gradient_based_concept_10_0.png)
+![png](2025-06-07-How_to_learn_gradient_based_concept_files/2025-06-07-How_to_lean_gradient_based_concept_10_0.png)
     
 
 
